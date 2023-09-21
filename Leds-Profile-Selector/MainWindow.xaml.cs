@@ -73,5 +73,13 @@ namespace Leds_Profile_Selector
                 serialPort.Write("4");
             }
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            if (serialPort.IsOpen)
+            {
+                serialPort.Write("5");
+            }
+        }
     }
 }
