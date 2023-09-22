@@ -81,5 +81,29 @@ namespace Leds_Profile_Selector
                 serialPort.Write("5");
             }
         }
+
+        private void ButtonLowBright_Click(object sender, RoutedEventArgs e)
+        {
+            if (serialPort.IsOpen)
+            {
+                serialPort.Write("6");
+            }
+        }
+
+        private void ButtonMedBright_Click(object sender, RoutedEventArgs e)
+        {
+            if (serialPort.IsOpen)
+            {
+                serialPort.Write("7");
+            }
+        }
+
+        private void ButtonHighBright_Click(object sender, RoutedEventArgs e)
+        {
+            if (serialPort.IsOpen)
+            {
+                serialPort.Write("8");
+            }
+        }
     }
 }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Leds_Profile_Selector"
         mc:Ignorable="d"
-        Title="Arduino Profile Selector" Height="201" Width="494" ResizeMode="NoResize" WindowStyle='SingleBorderWindow' Icon="/arduino_22429.ico">
+        Title="Arduino Profile Selector" Height="249" Width="494" ResizeMode="NoResize" WindowStyle='SingleBorderWindow' Icon="/arduino_22429.ico">
 
-    <Grid Background="#FF252525">
+    <Grid Background="#FF252525" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <!-- Pierwsza etykieta -->
@@ -15,18 +15,20 @@
             <!-- Druga etykieta -->
             <RowDefinition Height="Auto"/>
             <!-- Przyciski -->
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="55" />
+            <!-- Jasność -->
+            <RowDefinition Height="Auto" MinHeight="65" />
             <!-- Menu -->
         </Grid.RowDefinitions>
 
         <!-- Pierwsza etykieta -->
-        <Label Content="Arduino Profile Selector" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        <Label Content="Arduino Profile Selector" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White" Height="34" Width="198"/>
 
         <!-- Druga etykieta -->
-        <Label Content="Select a mode:" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="#FFBBBBBB" />
+        <Label Content="Select a mode:" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="#FFBBBBBB" Height="26" Width="87" />
 
         <!-- Panel przycisków -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="475">
             <!-- Przycisk 1 -->
             <Button Content="Rainbow" Margin="10" Background="#FF616161" Foreground="White" Height="23" Width="75" BorderThickness="0,0,0,0" Click="Button_Click_1"  />
 
@@ -38,12 +40,17 @@
 
             <!-- Przycisk 4 -->
             <Button Content="Commet" Margin="10"  Background="#FF616161" Foreground="White" Height="23" Width="75" BorderThickness="0,0,0,0" Click="Button_Click_4"  />
-            
+
             <!-- PRzycisk 5 -->
             <Button Content="White" Margin="10"  Background="#FF616161" Foreground="White" Height="23" Width="75" BorderThickness="0,0,0,0" Click="Button_Click_5"  />
         </StackPanel>
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,-5">
-            <Button Content="Clear Queue" BorderThickness="0,0,0,0"  Foreground="White" Background="#48ff00" Click="ButtonReset_Click" Margin="10" Height="25" Width="80" />
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0" Height="45" VerticalAlignment="Center" Width="300">
+            <Button Content="20% Bright" BorderThickness="0,0,0,0"  Foreground="White" Background="#FF007B61" Click="ButtonLowBright_Click" Margin="10" Height="25" Width="80" />
+            <Button Content="50% Bright" BorderThickness="0,0,0,0"  Foreground="White" Background="#FF00B3A7" Click="ButtonMedBright_Click" Height="25" Width="80" Margin="10" />
+            <Button Content="100% Bright" BorderThickness="0,0,0,0"  Foreground="White" Background="#FF009CFF" Click="ButtonHighBright_Click" Height="25" Width="80" Margin="10" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Height="45" VerticalAlignment="Top" Width="200" Margin="0,5,0,0">
+            <Button Content="Clear Queue" BorderThickness="0,0,0,0"  Foreground="White" Background="#FF32B100" Click="ButtonReset_Click" Margin="10" Height="25" Width="80" />
             <Button Content="Close" BorderThickness="0,0,0,0"  Foreground="White" Background="#FFB32626" Click="Button_Click" Height="25" Width="80" Margin="10" />
         </StackPanel>
     </Grid>

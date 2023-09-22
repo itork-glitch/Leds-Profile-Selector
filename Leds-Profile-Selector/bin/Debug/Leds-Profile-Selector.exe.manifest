@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Leds-Profile-Selector.exe" size="79784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Leds-Profile-Selector.exe" size="81320">
       <assemblyIdentity name="Leds-Profile-Selector" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aVN8BVGsaazDdld8Y0ucNfrBOhmjAIvNwVUl5O5nMds=</dsig:DigestValue>
+        <dsig:DigestValue>BdohbLd8a3N2m8CyVbEb5JmEMVD4G6/1KK6g/cl5ivA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
